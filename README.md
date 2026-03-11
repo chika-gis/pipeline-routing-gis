@@ -86,8 +86,8 @@ Contains supplementary notes describing methodological decisions, modelling assu
 1. Download or clone the repository.  
 2. Open the project workspace in **ArcGIS Pro**.  
 3. Load spatial datasets from the **data** folder.  
-4. Run preprocessing workflows to standardize datasets into raster format.  
-5. Apply the suitability modelling process using Weighted Overlay.  
+4. Run the preprocessing workflows to prepare and standardize spatial datasets into raster format.  
+5. Apply the suitability modelling process by combining standardized raster layers using weighted overlay analysis.  
 6. Execute cost-distance analysis to calculate cumulative movement cost.  
 7. Run least-cost path analysis to extract the optimal pipeline alignment.  
 8. Review outputs stored in the **outputs** folder.
