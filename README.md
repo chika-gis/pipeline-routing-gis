@@ -68,7 +68,19 @@ Contains spatial datasets used in the modelling process, including environmental
 Contains raster algebra expressions used within ArcGIS Pro to enforce spatial constraints. Python was used only within ArcGIS tools (Raster Calculator / ModelBuilder) for constraint enforcement.
 
 ### **Model/**
-Contains ArcGIS ModelBuilder workflows used to automate spatial processing tasks and reproduce the MCDA workflow.
+Contains all components required to run the spatial modelling workflow in **ArcGIS Pro**. It includes:
+
+- **MyProject.aprx** — The ArcGIS Pro project containing the full ModelBuilder workflow.
+- **MyProject.atbx** — The ArcGIS toolbox used by the model.
+- **MyProject.gdb.zip** — A zipped file geodatabase containing the spatial datasets used in the workflow.
+
+Because the ModelBuilder workflow could not be exported as a standalone file, the complete ArcGIS Pro project environment is provided. These three items work together to reproduce the **MCDA pipeline routing analysis**, including:
+
+- The ModelBuilder workflow implementing the MCDA methodology  
+- All required spatial layers and intermediate datasets  
+- The full processing sequence used in the spatial modelling workflow  
+
+To view, run, or modify the model, open the **`MyProject.aprx`** file inside the `Model/` folder. ArcGIS Pro will automatically reference the toolbox and geodatabase stored alongside it, so **all three files must remain together** for the project to function correctly.
 
 ### **Outputs/**
 Includes final analytical results such as suitability maps, cost surfaces, and the derived optimal pipeline route.
@@ -80,14 +92,14 @@ Contains maps, workflow diagrams, and visual outputs illustrating the modelling 
 
 ## How to Use the Repository
 
-1. Download or clone the repository.  
-2. Open the project workspace in **ArcGIS Pro**.  
-3. Load spatial datasets from the **data** folder.  
-4. Run the preprocessing workflows to prepare and standardize spatial datasets into raster format.  
-5. Apply the suitability modelling process by combining standardized raster layers using weighted overlay analysis.  
-6. Execute cost-distance analysis to calculate cumulative movement cost.  
-7. Run least-cost path analysis to extract the optimal pipeline alignment.  
-8. Review outputs stored in the **outputs** folder.
+1. Download or clone the repository to your local machine.  
+2. Navigate to the **Model/** folder and open **`MyProject.aprx`** in **ArcGIS Pro**.  
+3. Ensure that **`MyProject.atbx`** and **`MyProject.gdb.zip`** remain in the same folder as the project file.  
+4. Extract **`MyProject.gdb.zip`** so the file geodatabase is available for the project.  
+5. Once the project opens, locate the **ModelBuilder workflow** contained in the toolbox.  
+6. Run the model to execute the full spatial modelling workflow, including the MCDA-based pipeline routing analysis.  
+7. The workflow will process the spatial datasets, perform suitability analysis, calculate cost-distance surfaces, and generate the least-cost pipeline route.  
+8. Review the resulting outputs and intermediate datasets within the project geodatabase and maps in the ArcGIS Pro project.
 
 Users may modify suitability scores or weighting parameters to explore alternative routing scenarios.
 
