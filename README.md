@@ -76,9 +76,6 @@ Includes final analytical results such as suitability maps, cost surfaces, and t
 ### **Figures/**
 Contains maps, workflow diagrams, and visual outputs illustrating the modelling process and results.
 
-### **Documentation/**
-Contains supplementary notes describing methodological decisions, modelling assumptions, and analytical procedures.
-
 ---
 
 ## How to Use the Repository
